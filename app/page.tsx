@@ -26,11 +26,12 @@ export default function Home() {
           <div className="relative max-w-7xl mx-auto mb-8">
             <div className="rounded-lg p-8 lg:p-16">
               <Image
-                src="/images/hero.svg"
+                src="/images/hero.png"
                 alt="Vehicle Inspection"
                 className="w-full h-auto rounded-lg"
                 width={200}
                 height={200}
+                loading="lazy"
                 priority
               />
             </div>
