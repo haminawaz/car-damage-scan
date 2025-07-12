@@ -2,17 +2,17 @@ import Image from "next/image";
 
 const damageData = [
   {
-    image: "/images/damage-detect-1.svg",
+    image: "/images/damage-detect-1.png",
     cardImage: "/images/damage-detect-card-1.svg",
     tags: ["dent", "back door right", "2.5cm"],
   },
   {
-    image: "/images/damage-detect-2.svg",
+    image: "/images/damage-detect-2.png",
     cardImage: "/images/damage-detect-card-2.svg",
     tags: ["deep scracth", "rear bumper", "2.7cm"],
   },
   {
-    image: "/images/damage-detect-3.svg",
+    image: "/images/damage-detect-3.png",
     cardImage: "/images/damage-detect-card-3.svg",
     tags: ["rim damage", "front wheel left", "3.8cm"],
   },
@@ -45,7 +45,7 @@ export default function AiDamageSection() {
 
         <div className="rounded-2xl overflow-hidden shadow-sm">
           <Image
-            src="/images/damage-detect.svg"
+            src="/images/damage-detect.png"
             alt="AI Car Damage"
             width={800}
             height={600}

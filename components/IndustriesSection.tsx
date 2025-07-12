@@ -12,7 +12,7 @@ const IndustriesSection = () => {
   const industryCardsData = [
     {
       id: 1,
-      imageSrc: "/images/application-1.svg",
+      imageSrc: "/images/application-1.png",
       imageAlt: "Cars in a lot for leasing and re-marketing",
       icon: "RefreshCcw",
       title: "Leasing & re-marketing",
@@ -22,7 +22,7 @@ const IndustriesSection = () => {
     },
     {
       id: 2,
-      imageSrc: "/images/application-2.svg",
+      imageSrc: "/images/application-2.png",
       imageAlt: "Cargo ship and cars in a port",
       icon: "MousePointer2",
       title: "Ports & Logistics",
@@ -32,7 +32,7 @@ const IndustriesSection = () => {
     },
     {
       id: 3,
-      imageSrc: "/images/application-3.svg",
+      imageSrc: "/images/application-3.png",
       imageAlt: "Cars on an assembly line",
       icon: "Car",
       title: "OEMs",

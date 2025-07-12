@@ -59,7 +59,7 @@ export default function Home() {
       <section className="w-full flex item-center justify-center py-16">
         <div className="max-w-6xl">
           <Image
-            src="/images/video-sec.svg"
+            src="/images/video-sec.png"
             alt="video section"
             className="w-full h-auto rounded-lg"
             width={200}
