@@ -31,7 +31,6 @@ export default function Home() {
                 className="w-full h-auto rounded-lg"
                 width={200}
                 height={200}
-                loading="lazy"
                 priority
               />
             </div>
