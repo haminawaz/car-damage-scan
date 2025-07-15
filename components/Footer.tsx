@@ -8,8 +8,8 @@ export default function Footer() {
   return (
     <footer className="bg-[url('/images/footer-bg.svg')] bg-cover bg-center text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          <div className="ps-20 pt-4 space-y-4">
+        <div className="grid grid-cols-2 gap-8">
+          <div className="flex flex-col items-center justify-center  pt-4 space-y-4">
             <div className="flex items-center">
               <div className="flex-shrink-0 flex items-center">
                 <Image
@@ -21,7 +21,9 @@ export default function Footer() {
                 />
               </div>
             </div>
-            <p className="text-gray-300 text-sm">Effortless car inspections</p>
+            <p className="text-gray-300 text-xs sm:text-sm">
+              Effortless car inspections
+            </p>
             <div className="flex space-x-4">
               <a
                 href="#"
@@ -49,69 +51,15 @@ export default function Footer() {
               </a>
             </div>
           </div>
-
-          <div className="ps-20 pt-4 space-y-4">
-            <h3 className="text-sm font-semibold text-gray-300 uppercase tracking-wider">
-              Useful Links
-            </h3>
-            <ul className="space-y-2">
-              <li>
-                <a
-                  href="#"
-                  className="text-gray-300 hover:text-white transition-colors text-sm"
-                >
-                  Features
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#"
-                  className="text-gray-300 hover:text-white transition-colors text-sm"
-                >
-                  About
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#"
-                  className="text-gray-300 hover:text-white transition-colors text-sm"
-                >
-                  Testimonial
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#"
-                  className="text-gray-300 hover:text-white transition-colors text-sm"
-                >
-                  Pricing
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#"
-                  className="text-gray-300 hover:text-white transition-colors text-sm"
-                >
-                  Contact
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#"
-                  className="text-gray-300 hover:text-white transition-colors text-sm"
-                >
-                  Blog
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#"
-                  className="text-gray-300 hover:text-white transition-colors text-sm"
-                >
-                  404
-                </a>
-              </li>
-            </ul>
+          <div className="flex items-center justify-center">
+            <button
+              className="text-white px-4 py-2 rounded-lg text-sm font-medium transition-opacity hover:opacity-90"
+              style={{
+                background: "linear-gradient(to bottom, #3CC0F0, #3C8FF5)",
+              }}
+            >
+              Contact
+            </button>
           </div>
         </div>
 
