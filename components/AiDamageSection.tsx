@@ -55,7 +55,7 @@ export default function AiDamageSection() {
         </div>
       </div>
 
-      <div className="max-w-5xl mx-auto mt-16 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div className="max-w-5xl mx-auto mt-16 grid grid-cols-1 md:grid-cols-3 gap-6">
         {damageData.map((item, idx) => (
           <div
             key={idx}
@@ -79,11 +79,11 @@ export default function AiDamageSection() {
                 />
               </div>
             </div>
-            <div className="flex justify-between items-center px-4 py-3 mt-auto">
+            <div className="flex justify-between items-center px-4 md:px-0 lg:px-4 py-3 mt-auto">
               {item.tags.map((tag, i) => (
                 <span
                   key={i}
-                  className="text-[10px] px-4 py-1 border-2 border-[#A267E7] rounded-full uppercase font-medium whitespace-nowrap"
+                  className="text-[8px] md:text-[7px] lg:text-[8px] px-4 md:px-3 lg:px-4 py-1 border-2 border-[#A267E7] rounded-full uppercase font-medium whitespace-nowrap"
                 >
                   {tag}
                 </span>
