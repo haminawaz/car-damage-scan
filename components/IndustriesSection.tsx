@@ -1,20 +1,12 @@
-import { LuCar, LuMousePointer2 } from "react-icons/lu";
-import { FiRefreshCcw } from "react-icons/fi";
 import Image from "next/image";
 
 const IndustriesSection = () => {
-  const IconMap = {
-    RefreshCcw: FiRefreshCcw,
-    MousePointer2: LuMousePointer2,
-    Car: LuCar,
-  };
-
   const industryCardsData = [
     {
       id: 1,
       imageSrc: "/images/application-1.png",
       imageAlt: "Cars in a lot for leasing and re-marketing",
-      icon: "RefreshCcw",
+      icon: "/images/industries-card-1.svg",
       title: "Leasing & re-marketing",
       description:
         "Accurately detect return damage and prevent end-of-lease disputes. Document imperfections with high resolution and boost resale value through consistent inspections.",
@@ -24,17 +16,17 @@ const IndustriesSection = () => {
       id: 2,
       imageSrc: "/images/application-2.png",
       imageAlt: "Cargo ship and cars in a port",
-      icon: "MousePointer2",
+      icon: "/images/industries-card-2.svg",
       title: "Ports & Logistics",
       description:
-        "Accelerate vehicle flows with instant, AI-driven inspections. Replace manual checks, cut costs, and keep a verified digital record across your logistics chain.",
+      "Accelerate vehicle flows with instant, AI-driven inspections. Replace manual checks, cut costs, and keep a verified digital record across your logistics chain.",
       link: "#",
     },
     {
       id: 3,
       imageSrc: "/images/application-3.png",
       imageAlt: "Cars on an assembly line",
-      icon: "Car",
+      icon: "/images/industries-card-3.svg",
       title: "OEMs",
       description:
         "The highest technology and the latest generation of AI technology to effectively and efficiently inspect cars rented or valeted in your airport.",
@@ -44,7 +36,7 @@ const IndustriesSection = () => {
 
   return (
     <section className="py-16">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="w-full mx-auto px-3 md:px-12">
         <div className="text-center mb-12">
           <span className="bg-white text-xs uppercase px-6 py-1 rounded-full border-2 border-[#d47ffe]">
             Applications
@@ -60,7 +52,6 @@ const IndustriesSection = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {industryCardsData.map((card) => {
-            const IconComponent = IconMap[card.icon as keyof typeof IconMap];
             return (
               <div
                 key={card.id}
@@ -79,12 +70,14 @@ const IndustriesSection = () => {
                 <div className="p-6 flex flex-col flex-grow">
                   <div className="flex items-center mb-4">
                     <div className="w-10 h-10 rounded-full bg-blue-100 flex items-center justify-center mr-3">
-                      <span className="inline-flex items-center justify-center w-10 h-10 rounded-full text-white font-bold text-sm bg-[linear-gradient(to_right,_#3B6FF7,_#3CC0F0)]">
-                        {IconComponent ? (
-                          <IconComponent size={24} color="white" />
-                        ) : (
-                          <span className="text-white">{card.icon}</span>
-                        )}
+                      <span className="inline-flex items-center justify-center w-10 h-10 rounded-xl text-white font-bold text-sm bg-[linear-gradient(to_right,_#3B6FF7,_#3CC0F0)]">
+                        <Image
+                          src={card.icon}
+                          alt={card.title}
+                          width={20}
+                          height={20}
+                          priority
+                        />
                       </span>
                     </div>
                     <h3 className="text-xl font-semibold text-gray-900">

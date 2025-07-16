@@ -56,17 +56,15 @@ export default function Home() {
       </section>
 
       {/* Video Section */}
-      <section className="w-full flex item-center justify-center py-16">
-        <div className="max-w-6xl">
-          <Image
-            src="/images/video-sec.png"
-            alt="video section"
-            className="w-full h-auto rounded-lg"
-            width={200}
-            height={200}
-            priority
-          />
-        </div>
+      <section className="w-full flex item-center justify-center py-12 md:py-16 px-3 md:px-12">
+        <Image
+          src="/images/video-sec.png"
+          alt="video section"
+          className="w-full h-auto rounded-lg"
+          width={200}
+          height={200}
+          priority
+        />
       </section>
 
       <AiDamageSection />
