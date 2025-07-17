@@ -12,7 +12,7 @@ export default function Home() {
     <div className="min-h-screen bg-background">
       <Header />
 
-      <section className="py-10 font-ubuntu">
+      <section className="pt-10 font-ubuntu">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <h1 className="text-3xl lg:text-5xl font-bold text-gray-900 mb-2 lg:mb-4">
@@ -22,19 +22,20 @@ export default function Home() {
               Fully automatic - Powered by AI
             </p>
           </div>
-
-          <div className="relative max-w-7xl mx-auto mb-8">
-            <div className="rounded-lg p-8 lg:p-16">
-              <Image
-                src="/images/hero.png"
-                alt="Vehicle Inspection"
-                className="w-full h-auto rounded-lg"
-                width={200}
-                height={200}
-                priority
-              />
-            </div>
-          </div>
+        </div>
+      </section>
+      <section className="relative max-w-full mx-auto">
+        <div className="rounded-lg">
+          <video
+            src="/videos/hero.mp4"
+            autoPlay
+            loop
+            muted
+            playsInline
+            className="w-full h-auto rounded-lg"
+          >
+            Your browser does not support the video tag.
+          </video>
         </div>
       </section>
 
@@ -55,16 +56,20 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Video Section */}
-      <section className="w-full flex item-center justify-center py-12 md:py-16 px-3 md:px-12">
-        <Image
-          src="/images/video-sec.png"
-          alt="video section"
-          className="w-full h-auto rounded-lg"
-          width={200}
-          height={200}
-          priority
-        />
+      <section className="w-full flex items-center justify-center py-12 md:py-16 px-3 md:px-12">
+        <div className="w-full h-[500px] md:h-[600px] overflow-hidden rounded-lg">
+          <video
+            src="/videos/video-sec.mp4"
+            autoPlay
+            loop
+            muted
+            controls
+            playsInline
+            className="w-full h-full object-cover"
+          >
+            Your browser does not support the video tag.
+          </video>
+        </div>
       </section>
 
       <AiDamageSection />
