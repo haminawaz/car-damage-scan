@@ -100,13 +100,15 @@ const CardSection = () => {
             </div>
 
             <div className="w-full md:w-1/2 flex justify-center">
-              <Image
-                src={card.image}
-                alt={card.title}
-                width={400}
-                height={400}
-                priority
-              />
+              <div className="w-[200px] md:w-[400px]">
+                <Image
+                  src={card.image}
+                  alt={card.title}
+                  width={400}
+                  height={400}
+                  priority
+                />
+              </div>
             </div>
           </div>
         );

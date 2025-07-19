@@ -40,7 +40,7 @@ export default function Home() {
       </section>
 
       <section className="py-0 md:py-16 font-poppins">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <div className="max-w-7xl mx-auto py-10 sm:py-0 px-4 sm:px-6 lg:px-8 text-center">
           <div className="mb-8">
             <span className="bg-white text-xs uppercase px-10 py-1 rounded-full border-2 border-[#d47ffe]">
               benefits
