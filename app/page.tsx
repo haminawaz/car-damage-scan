@@ -27,14 +27,14 @@ export default function Home() {
       <section className="relative max-w-full mx-auto">
         <div className="rounded-lg">
           <video
-            src="/videos/hero.mp4"
-            autoPlay
-            loop
-            muted
-            playsInline
             className="w-full h-auto rounded-lg"
+            preload="metadata"
+            autoPlay
+            muted
+            loop
+            playsInline
           >
-            Your browser does not support the video tag.
+            <source src="/videos/hero.mp4" type="video/mp4" />
           </video>
         </div>
       </section>
@@ -59,15 +59,15 @@ export default function Home() {
       <section className="w-full flex items-center justify-center py-12 md:py-16 px-3 md:px-12">
         <div className="w-full h-[500px] md:h-[600px] overflow-hidden rounded-lg">
           <video
-            src="/videos/video-sec.mp4"
+            className="w-full h-full object-cover"
+            preload="metadata"
             autoPlay
             loop
             muted
             controls
             playsInline
-            className="w-full h-full object-cover"
           >
-            Your browser does not support the video tag.
+            <source src="/videos/video-sec.mp4" type="video/mp4" />
           </video>
         </div>
       </section>
