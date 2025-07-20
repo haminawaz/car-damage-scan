@@ -18,7 +18,7 @@
 
 @layer base {
   :root {
-    --background: #f0f5fe;
+    --background: #f4f8fe;
     --header-color: #f1f6fd;
     --foreground: 0 0% 3.9%;
     --card: 0 0% 100%;

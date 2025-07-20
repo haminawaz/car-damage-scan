@@ -20,7 +20,7 @@ const CardSection = () => {
           point: "Clear documentation",
         },
       ],
-      image: "/images/built-1.svg",
+      image: "/images/built-1.png",
     },
     {
       title: "Maximise revenue, minimise risk",
@@ -40,12 +40,12 @@ const CardSection = () => {
           point: "Prevent losses before they happen",
         },
       ],
-      image: "/images/built-2.svg",
+      image: "/images/built-2.png",
     },
     {
       title: "Unlock maximum efficiency",
       description:
-        "Streamline your entire inspection process — faster, leaner, and smarter. Our system reduces manual effort, lowers operational costs, and keeps performance high, so you can scale effortlessly without added complexity.",
+        "Streamline your entire inspection process. Our system reduces manual effort, lowers operational costs, and keeps performance high, so you can scale effortlessly without added complexity.",
       points: [
         {
           icon: "/images/card-3point-1.svg",
@@ -60,30 +60,30 @@ const CardSection = () => {
           point: "Eliminate manual bottlenecks",
         },
       ],
-      image: "/images/built-3.svg",
+      image: "/images/built-3.png",
     },
   ];
 
   return (
-    <section className="py-8 px-4 sm:px-6 md:px-8 space-y-16">
+    <section className="py-8 px-4 sm:px-6 lg:px-8 space-y-16">
       {cards.map((card, index) => {
         const isImageRight = index % 2 !== 0;
 
         return (
           <div
             key={index}
-            className={`flex flex-col-reverse md:flex-row bg-white ${
-              isImageRight ? "md:flex-row-reverse" : ""
-            } items-center max-w-5xl mx-auto rounded-lg shadow-md px-6 py-10`}
+            className={`flex flex-col-reverse lg:flex-row bg-white ${
+              isImageRight ? "lg:flex-row-reverse" : ""
+            } items-center max-w-lg lg:max-w-5xl mx-auto rounded-xl shadow-md p-6`}
           >
-            <div className="w-full md:w-1/2 text-start font-poppins">
-              <h3 className="text-xl lg:text-2xl xl:text-3xl font-semibold text-gray-900 mb-4 mt-4 md:mt-0">
+            <div className="w-full lg:w-1/2 text-start font-poppins">
+              <h3 className="text-xl lg:text-2xl xl:text-3xl font-semibold text-gray-900 mb-4 mt-6 lg:mt-0">
                 {card.title}
               </h3>
-              <p className="text-gray-600 text-sm md:text-base mb-6 pe-5">
+              <p className="text-gray-600 text-sm lg:text-base mb-6 pe-5">
                 {card.description}
               </p>
-              <ul className="text-sm md:text-base text-gray-800 space-y-2 font-medium">
+              <ul className="text-sm lg:text-base text-gray-800 space-y-2 font-medium">
                 {card.points.map((point, i) => (
                   <li key={i} className="flex gap-3 mb-3">
                     <Image
@@ -99,11 +99,16 @@ const CardSection = () => {
               </ul>
             </div>
 
-            <div className="w-full md:w-1/2 flex justify-center">
-              <div className="w-[200px] md:w-[400px]">
+            <div
+              className={`w-full lg:w-1/2 flex ${
+                isImageRight ? "lg:justify-start" : "lg:justify-end"
+              }`}
+            >
+              <div className="w-full flex justify-center lg:w-[400px]">
                 <Image
                   src={card.image}
                   alt={card.title}
+                  className="rounded-xl"
                   width={400}
                   height={400}
                   priority

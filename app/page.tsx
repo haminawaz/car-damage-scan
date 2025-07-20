@@ -27,7 +27,7 @@ export default function Home() {
       <section className="relative max-w-full mx-auto">
         <div className="rounded-lg">
           <video
-            className="w-full h-auto rounded-lg"
+            className="w-full h-[400px] 2xl:h-[500px] 3xl:h-[700px] sm:object-cover rounded-lg"
             preload="metadata"
             autoPlay
             muted
@@ -59,7 +59,7 @@ export default function Home() {
       <section className="w-full flex items-center justify-center py-12 md:py-16 px-3 md:px-12">
         <div className="w-full h-[500px] md:h-[600px] overflow-hidden rounded-lg">
           <video
-            className="w-full h-full object-cover"
+            className="w-full h-full object-none"
             preload="metadata"
             autoPlay
             loop

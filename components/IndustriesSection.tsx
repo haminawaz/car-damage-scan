@@ -38,10 +38,10 @@ const IndustriesSection = () => {
     <section className="py-16">
       <div className="w-full mx-auto px-3 md:px-12">
         <div className="text-center mb-12">
-          <span className="bg-white text-xs uppercase px-6 py-1 rounded-full border-2 border-[#d47ffe]">
+          <span className="bg-white text-xs shadow-xl uppercase px-6 py-1 font-medium rounded-full border-2 border-[#d47ffe]">
             Applications
           </span>
-          <h2 className="text-3xl lg:text-5xl font-bold text-gray-900 my-4 font-poppins">
+          <h2 className="text-3xl lg:text-5xl font-bold text-[#1B0C25] my-4 font-poppins">
             The industries we serve
           </h2>
           <p className="text-gray-600 text-xs lg:text-base">
@@ -50,12 +50,12 @@ const IndustriesSection = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 w-10/12 sm:w-full mx-auto">
           {industryCardsData.map((card) => {
             return (
               <div
                 key={card.id}
-                className="bg-white rounded-lg shadow-lg overflow-hidden flex flex-col"
+                className="bg-white rounded-lg overflow-hidden flex flex-col border border-[#255cf43b]"
               >
                 <div className="relative w-full h-64">
                   <Image
@@ -80,16 +80,16 @@ const IndustriesSection = () => {
                         />
                       </span>
                     </div>
-                    <h3 className="text-xl font-semibold text-gray-900">
+                    <h3 className="text-xl font-bold text-black">
                       {card.title}
                     </h3>
                   </div>
-                  <p className="text-gray-700 mb-4 flex-grow">
+                  <p className="text-black mb-4 text-[15px] flex-grow">
                     {card.description}
                   </p>
                   <a
                     href={card.link}
-                    className="text-[#3B8DF4] underline mt-auto text-sm"
+                    className="text-[#3b8df4] underline underline-offset-4 font-medium mt-auto text-sm"
                   >
                     Learn more
                   </a>

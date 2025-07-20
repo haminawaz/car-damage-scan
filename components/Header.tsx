@@ -5,8 +5,8 @@ import Image from "next/image";
 
 export default function Header() {
   return (
-    <div className="sticky md:relative top-0 z-50 bg-background md:bg-none w-full flex justify-center pt-3">
-      <header className="relative bg-header shadow top-0 z-50 rounded-xl w-11/12">
+    <div className="sticky md:relative top-0 z-50 md:bg-none w-full flex justify-center pt-3">
+      <header className="relative shadow bg-background top-0 z-50 rounded-xl w-11/12">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
             <div className="flex items-center">

@@ -9,6 +9,10 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      screens: {
+        "2xl": "1536px",
+        "3xl": "1900px",
+      },
       fontFamily: {
         ubuntu: ["var(--font-ubuntu)", "sans-serif"],
         poppins: ["var(--font-poppins)", "sans-serif"],
