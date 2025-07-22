@@ -1,4 +1,5 @@
 import Image from "next/image";
+import ScrollRevealCard from "./animations/ScrollRevealCard";
 
 const CardSection = () => {
   const cards = [
@@ -70,52 +71,54 @@ const CardSection = () => {
         const isImageRight = index % 2 !== 0;
 
         return (
-          <div
-            key={index}
-            className={`flex flex-col-reverse lg:flex-row bg-white ${
-              isImageRight ? "lg:flex-row-reverse" : ""
-            } items-center max-w-lg lg:max-w-5xl mx-auto rounded-xl shadow-md p-6`}
-          >
-            <div className="w-full lg:w-1/2 text-start font-poppins">
-              <h3 className="text-xl lg:text-2xl xl:text-3xl font-semibold text-gray-900 mb-4 mt-6 lg:mt-0">
-                {card.title}
-              </h3>
-              <p className="text-gray-600 text-sm lg:text-base mb-6 pe-5">
-                {card.description}
-              </p>
-              <ul className="text-sm lg:text-base text-gray-800 space-y-2 font-medium">
-                {card.points.map((point, i) => (
-                  <li key={i} className="flex gap-3 mb-3">
-                    <Image
-                      src={point.icon}
-                      alt={card.title}
-                      width={20}
-                      height={20}
-                      priority
-                    />
-                    <span>{point.point}</span>
-                  </li>
-                ))}
-              </ul>
-            </div>
-
+          <ScrollRevealCard delay={0.1}>
             <div
-              className={`w-full lg:w-1/2 flex ${
-                isImageRight ? "lg:justify-start" : "lg:justify-end"
-              }`}
+              key={index}
+              className={`flex flex-col-reverse lg:flex-row bg-white ${
+                isImageRight ? "lg:flex-row-reverse" : ""
+              } items-center max-w-lg lg:max-w-5xl mx-auto rounded-xl shadow-md p-6`}
             >
-              <div className="w-full flex justify-center lg:w-[400px]">
-                <Image
-                  src={card.image}
-                  alt={card.title}
-                  className="rounded-xl"
-                  width={400}
-                  height={400}
-                  priority
-                />
+              <div className="w-full lg:w-1/2 text-start font-poppins">
+                <h3 className="text-xl lg:text-2xl xl:text-3xl font-semibold text-gray-900 mb-4 mt-6 lg:mt-0">
+                  {card.title}
+                </h3>
+                <p className="text-gray-600 text-sm lg:text-base mb-6 pe-5">
+                  {card.description}
+                </p>
+                <ul className="text-sm lg:text-base text-gray-800 space-y-2 font-medium">
+                  {card.points.map((point, i) => (
+                    <li key={i} className="flex gap-3 mb-3">
+                      <Image
+                        src={point.icon}
+                        alt={card.title}
+                        width={20}
+                        height={20}
+                        priority
+                      />
+                      <span>{point.point}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+
+              <div
+                className={`w-full lg:w-1/2 flex ${
+                  isImageRight ? "lg:justify-start" : "lg:justify-end"
+                }`}
+              >
+                <div className="w-full flex justify-center lg:w-[400px]">
+                  <Image
+                    src={card.image}
+                    alt={card.title}
+                    className="rounded-xl"
+                    width={400}
+                    height={400}
+                    priority
+                  />
+                </div>
               </div>
             </div>
-          </div>
+          </ScrollRevealCard>
         );
       })}
     </section>

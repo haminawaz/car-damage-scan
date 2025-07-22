@@ -1,11 +1,15 @@
 "use client";
 
-import Image from "next/image";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import CardSection from "@/components/CardSection";
 import AiDamageSection from "@/components/AiDamageSection";
 import IndustriesSection from "@/components/IndustriesSection";
+import BlurTextContainer from "@/components/animations/BlurTextContainer";
+import {
+  SlideUp,
+  SlideDown,
+} from "@/components/animations/BasicRevealAnimations";
 
 export default function Home() {
   return (
@@ -15,12 +19,16 @@ export default function Home() {
       <section className="pt-10 font-ubuntu">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
-            <h1 className="text-3xl lg:text-5xl font-bold text-gray-900 mb-2 lg:mb-4">
-              Optimised Vehicle Inspections
-            </h1>
-            <p className="text-lg lg:text-xl text-gray-600 mb-8">
-              Fully automatic - Powered by AI
-            </p>
+            <BlurTextContainer delay={0} stagger={0.03} duration={0.7}>
+              <h1 className="text-3xl lg:text-5xl font-bold text-gray-900 mb-2 lg:mb-4">
+                Optimised Vehicle Inspections
+              </h1>
+            </BlurTextContainer>
+            <SlideDown delay={0.03}>
+              <p className="text-lg lg:text-xl text-gray-600 mb-8">
+                Fully automatic - Powered by AI
+              </p>
+            </SlideDown>
           </div>
         </div>
       </section>
@@ -42,22 +50,28 @@ export default function Home() {
       <section className="py-0 md:py-16 font-poppins">
         <div className="max-w-7xl mx-auto py-10 sm:py-0 px-4 sm:px-6 lg:px-8 text-center">
           <div className="mb-8">
-            <span className="bg-white text-xs uppercase px-10 py-1 rounded-full border-2 border-[#d47ffe]">
-              benefits
-            </span>
-            <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mt-8">
-              Built for impact
-            </h2>
-            <p className="text-gray-600 mt-4 max-w-2xl mx-auto">
-              Turning every inspection into a competitive advantage
-            </p>
+            <SlideUp delay={0.06}>
+              <span className="bg-white text-xs uppercase px-10 py-1 rounded-full border-2 border-[#d47ffe]">
+                benefits
+              </span>
+            </SlideUp>
+            <BlurTextContainer delay={0} stagger={0.03} duration={0.7}>
+              <div>
+                <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mt-8">
+                  Built for impact
+                </h2>
+                <p className="text-gray-600 mt-4 max-w-2xl mx-auto">
+                  Turning every inspection into a competitive advantage
+                </p>
+              </div>
+            </BlurTextContainer>
           </div>
           <CardSection />
         </div>
       </section>
 
-      <section className="w-full flex items-center justify-center py-12 md:py-16 px-3 md:px-12">
-        <div className="w-full h-[500px] md:h-[600px] overflow-hidden rounded-lg">
+      <section className="w-full flex items-center justify-center md:py-16 px-3 md:px-12">
+        <div className="w-full h-[300px] sm:h-[500px] md:h-[600px] overflow-hidden rounded-xl">
           <video
             className="w-full h-full object-none"
             preload="metadata"
