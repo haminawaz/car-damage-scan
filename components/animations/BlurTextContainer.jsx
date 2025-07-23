@@ -1,4 +1,3 @@
-// components/BlurTextContainer.jsx
 import React, { useRef, Children, cloneElement } from 'react';
 import { motion, useInView } from 'framer-motion';
 

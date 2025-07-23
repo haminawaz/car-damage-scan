@@ -1,5 +1,5 @@
 import Image from "next/image";
-import ScrollRevealCard from "./animations/ScrollRevealCard";
+import ScrollCardAnimator from "./animations/ScrollCardAnimator";
 
 const CardSection = () => {
   const cards = [
@@ -66,12 +66,12 @@ const CardSection = () => {
   ];
 
   return (
-    <section className="py-8 px-4 sm:px-6 lg:px-8 space-y-16">
-      {cards.map((card, index) => {
-        const isImageRight = index % 2 !== 0;
+    <section className="relative py-8 px-4 sm:px-6 lg:px-8 space-y-16">
+      <ScrollCardAnimator>
+        {cards.map((card, index) => {
+          const isImageRight = index % 2 !== 0;
 
-        return (
-          <ScrollRevealCard delay={0.1}>
+          return (
             <div
               key={index}
               className={`flex flex-col-reverse lg:flex-row bg-white ${
@@ -118,9 +118,9 @@ const CardSection = () => {
                 </div>
               </div>
             </div>
-          </ScrollRevealCard>
-        );
-      })}
+          );
+        })}
+      </ScrollCardAnimator>
     </section>
   );
 };

@@ -62,13 +62,13 @@ const IndustriesSection = () => {
           </SlideDown>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 w-10/12 sm:w-full mx-auto">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 w-10/12 sm:w-full mx-auto items-stretch">
           {industryCardsData.map((card, idx) => {
             return (
               <ScrollRevealCard delay={idx * 0.2}>
                 <div
                   key={card.id}
-                  className="bg-white rounded-lg overflow-hidden flex flex-col border border-[#255cf43b]"
+                  className="bg-white rounded-lg overflow-hidden flex flex-col border border-[#255cf43b] h-full"
                 >
                   <div className="relative w-full h-64">
                     <Image

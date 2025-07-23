@@ -15,17 +15,17 @@ const baseVariants = {
 export const FadeIn = ({
   children,
   delay = 0,
-  duration = baseVariants.visible.transition.duration,
+  duration = 0.8,
   amount = 0.5,
 }) => {
   const ref = useRef(null);
-  const isInView = useInView(ref, { once: true, amount });
+  const isInView = useInView(ref, { amount });
 
   const variants = {
-    hidden: { ...baseVariants.hidden },
+    hidden: { opacity: 0 },
     visible: {
-      ...baseVariants.visible,
-      transition: { ...baseVariants.visible.transition, duration, delay },
+      opacity: 1,
+      transition: { duration, delay, ease: [0.42, 0, 0.58, 1] },
     },
   };
 
@@ -34,7 +34,7 @@ export const FadeIn = ({
       ref={ref}
       variants={variants}
       initial="hidden"
-      animate={isInView ? "visible" : "hidden"}
+      animate={isInView ? "visible" : "hidden"} // animate in both directions
       style={{ willChange: "opacity" }}
     >
       {children}
@@ -45,19 +45,19 @@ export const FadeIn = ({
 export const SlideUp = ({
   children,
   delay = 0,
-  duration = baseVariants.visible.transition.duration,
+  duration = 0.8,
   y = 50,
   amount = 0.5,
 }) => {
   const ref = useRef(null);
-  const isInView = useInView(ref, { once: true, amount });
+  const isInView = useInView(ref, { amount });
 
   const variants = {
-    hidden: { ...baseVariants.hidden, y: y },
+    hidden: { opacity: 0, y },
     visible: {
-      ...baseVariants.visible,
+      opacity: 1,
       y: 0,
-      transition: { ...baseVariants.visible.transition, duration, delay },
+      transition: { duration, delay, ease: [0.42, 0, 0.58, 1] },
     },
   };
 
@@ -77,19 +77,19 @@ export const SlideUp = ({
 export const SlideDown = ({
   children,
   delay = 0,
-  duration = baseVariants.visible.transition.duration,
+  duration = 0.8,
   y = -50,
   amount = 0.5,
 }) => {
   const ref = useRef(null);
-  const isInView = useInView(ref, { once: true, amount });
+  const isInView = useInView(ref, { amount });
 
   const variants = {
-    hidden: { ...baseVariants.hidden, y: y },
+    hidden: { opacity: 0, y },
     visible: {
-      ...baseVariants.visible,
+      opacity: 1,
       y: 0,
-      transition: { ...baseVariants.visible.transition, duration, delay },
+      transition: { duration, delay, ease: [0.42, 0, 0.58, 1] },
     },
   };
 
@@ -109,19 +109,19 @@ export const SlideDown = ({
 export const ScaleIn = ({
   children,
   delay = 0,
-  duration = baseVariants.visible.transition.duration,
+  duration = 0.8,
   scale = 0.8,
   amount = 0.5,
 }) => {
   const ref = useRef(null);
-  const isInView = useInView(ref, { once: true, amount });
+  const isInView = useInView(ref, { amount });
 
   const variants = {
-    hidden: { ...baseVariants.hidden, scale: scale },
+    hidden: { opacity: 0, scale },
     visible: {
-      ...baseVariants.visible,
+      opacity: 1,
       scale: 1,
-      transition: { ...baseVariants.visible.transition, duration, delay },
+      transition: { duration, delay, ease: [0.42, 0, 0.58, 1] },
     },
   };
 
@@ -141,19 +141,19 @@ export const ScaleIn = ({
 export const FadeAndSlideRight = ({
   children,
   delay = 0,
-  duration = baseVariants.visible.transition.duration,
+  duration = 0.8,
   x = -50,
   amount = 0.5,
 }) => {
   const ref = useRef(null);
-  const isInView = useInView(ref, { once: true, amount });
+  const isInView = useInView(ref, { amount });
 
   const variants = {
-    hidden: { ...baseVariants.hidden, x: x },
+    hidden: { opacity: 0, x },
     visible: {
-      ...baseVariants.visible,
+      opacity: 1,
       x: 0,
-      transition: { ...baseVariants.visible.transition, duration, delay },
+      transition: { duration, delay, ease: [0.42, 0, 0.58, 1] },
     },
   };
 
@@ -173,19 +173,19 @@ export const FadeAndSlideRight = ({
 export const FadeAndSlideLeft = ({
   children,
   delay = 0,
-  duration = baseVariants.visible.transition.duration,
+  duration = 0.8,
   x = 50,
   amount = 0.5,
 }) => {
   const ref = useRef(null);
-  const isInView = useInView(ref, { once: true, amount });
+  const isInView = useInView(ref, { amount });
 
   const variants = {
-    hidden: { ...baseVariants.hidden, x: x },
+    hidden: { opacity: 0, x },
     visible: {
-      ...baseVariants.visible,
+      opacity: 1,
       x: 0,
-      transition: { ...baseVariants.visible.transition, duration, delay },
+      transition: { duration, delay, ease: [0.42, 0, 0.58, 1] },
     },
   };
 
